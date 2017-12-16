@@ -262,12 +262,19 @@
     if (model.avatarURLPath) {
         [self.avatarView sd_setImageWithURL:[NSURL URLWithString:model.avatarURLPath] placeholderImage:model.avatarImage];
     } else {
+        
         self.avatarView.image = model.avatarImage;
     }
     _nameLabel.text = model.nickname;
     
+    //判断是否是发送方
+
+    
     if (self.model.isSender) {
         _hasRead.hidden = YES;
+        
+//        _nameLabel.textColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:1];
+        
         switch (self.model.messageStatus) {
             case EMMessageStatusDelivering:
             {
@@ -296,6 +303,11 @@
             default:
                 break;
         }
+    }else{
+        
+        
+//        _nameLabel.textColor = [UIColor colorWithRed:1 green:0 blue:102/255.0 alpha:1];
+        
     }
 }
 

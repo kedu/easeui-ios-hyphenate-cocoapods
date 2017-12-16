@@ -107,7 +107,7 @@
     self.scrollsToTop = NO;
     self.userInteractionEnabled = YES;
     self.font = [UIFont systemFontOfSize:16.0f];
-    self.textColor = [UIColor blackColor];
+    self.textColor = [UIColor whiteColor];
     self.backgroundColor = [UIColor whiteColor];
     self.keyboardAppearance = UIKeyboardAppearanceDefault;
     self.keyboardType = UIKeyboardTypeDefault;

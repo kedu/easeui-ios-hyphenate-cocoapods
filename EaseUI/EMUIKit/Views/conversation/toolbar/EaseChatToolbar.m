@@ -112,6 +112,9 @@
     _backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     _backgroundImageView.backgroundColor = [UIColor clearColor];
     _backgroundImageView.image = [[UIImage easeImageNamed:@"EaseUIResource.bundle/messageToolbarBg"] stretchableImageWithLeftCapWidth:0.5 topCapHeight:10];
+    
+    _backgroundImageView.image = [UIImage imageNamed:@""];
+    
     [self addSubview:_backgroundImageView];
     
     //toolbar
@@ -133,7 +136,9 @@
     _inputTextView.placeHolder = NSEaseLocalizedString(@"message.toolBar.inputPlaceHolder", @"input a new message");
     _inputTextView.delegate = self;
     _inputTextView.backgroundColor = [UIColor clearColor];
-    _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
+//    [_inputTextView setTextColor:[UIColor whiteColor]];
+//    _inputTextView.layer.borderColor = [UIColor colorWithWhite:0.8f alpha:1.0f].CGColor;
+    _inputTextView.layer.borderColor =  [UIColor colorWithRed:38/255.0 green:40/255.0 blue:50/255.0 alpha:1].CGColor;
     _inputTextView.layer.borderWidth = 0.65f;
     _inputTextView.layer.cornerRadius = 6.0f;
     _previousTextViewContentHeight = [self _getTextViewContentH:_inputTextView];
@@ -155,8 +160,11 @@
     self.recordButton.accessibilityIdentifier = @"record";
     self.recordButton.titleLabel.font = [UIFont systemFontOfSize:15.0];
     [self.recordButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
+    
     [self.recordButton setBackgroundImage:[[UIImage easeImageNamed:@"EaseUIResource.bundle/chatBar_recordBg"] stretchableImageWithLeftCapWidth:10 topCapHeight:10] forState:UIControlStateNormal];
+    
     [self.recordButton setBackgroundImage:[[UIImage easeImageNamed:@"EaseUIResource.bundle/chatBar_recordSelectedBg"] stretchableImageWithLeftCapWidth:10 topCapHeight:10] forState:UIControlStateHighlighted];
+   
     [self.recordButton setTitle:kTouchToRecord forState:UIControlStateNormal];
     [self.recordButton setTitle:kTouchToFinish forState:UIControlStateHighlighted];
     self.recordButton.hidden = YES;
@@ -216,7 +224,8 @@
     if (_faceView == nil) {
         _faceView = [[EaseFaceView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_toolbarView.frame), self.frame.size.width, 180)];
         [(EaseFaceView *)_faceView setDelegate:self];
-        _faceView.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:242 / 255.0 blue:247 / 255.0 alpha:1.0];
+        _faceView.backgroundColor = [UIColor colorWithRed:38/255.0 green:40/255.0 blue:50/255.0 alpha:1];
+//        [UIColor colorWithRed:240 / 255.0 green:242 / 255.0 blue:247 / 255.0 alpha:1.0];
         _faceView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     }
     
@@ -227,7 +236,9 @@
 {
     if (_moreView == nil) {
         _moreView = [[EaseChatBarMoreView alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(_toolbarView.frame), self.frame.size.width, 80) type:self.chatBarType];
-        _moreView.backgroundColor = [UIColor colorWithRed:240 / 255.0 green:242 / 255.0 blue:247 / 255.0 alpha:1.0];
+        _moreView.backgroundColor = [UIColor colorWithRed:38/255.0 green:40/255.0 blue:50/255.0 alpha:1];
+        
+//        [UIColor colorWithRed:240 / 255.0 green:242 / 255.0 blue:247 / 255.0 alpha:1.0];
         _moreView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
     }
     

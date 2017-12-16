@@ -68,19 +68,19 @@ NSString *const EaseMessageCellIdentifierSendFile = @"EaseMessageCellSendFile";
     cell.rightBubbleMargin = UIEdgeInsetsMake(8, 10, 8, 15);
     cell.bubbleMargin = UIEdgeInsetsMake(8, 0, 8, 0);
     
-    cell.messageTextFont = [UIFont systemFontOfSize:15];
-    cell.messageTextColor = [UIColor blackColor];
+    cell.messageTextFont = [UIFont systemFontOfSize:12];
+    cell.messageTextColor = [UIColor whiteColor];
     
     cell.messageLocationFont = [UIFont systemFontOfSize:10];
     cell.messageLocationColor = [UIColor whiteColor];
     
-    cell.messageVoiceDurationColor = [UIColor grayColor];
+    cell.messageVoiceDurationColor = [UIColor whiteColor];
     cell.messageVoiceDurationFont = [UIFont systemFontOfSize:12];
     cell.voiceCellWidth = 75.f;
     
-    cell.messageFileNameColor = [UIColor blackColor];
+    cell.messageFileNameColor = [UIColor whiteColor];
     cell.messageFileNameFont = [UIFont systemFontOfSize:13];
-    cell.messageFileSizeColor = [UIColor grayColor];
+    cell.messageFileSizeColor = [UIColor whiteColor];
     cell.messageFileSizeFont = [UIFont systemFontOfSize:11];
 }
 

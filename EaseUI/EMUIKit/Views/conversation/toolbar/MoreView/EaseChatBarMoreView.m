@@ -18,6 +18,7 @@
 #define MOREVIEW_ROW 2
 #define MOREVIEW_BUTTON_TAG 1000
 
+//4
 @implementation UIView (MoreView)
 
 - (void)removeAllSubview
@@ -85,7 +86,7 @@
     [self addSubview:_pageControl];
     
     CGFloat insets = (self.frame.size.width - 4 * CHAT_BUTTON_SIZE.width) / 5;
-    
+
     _photoButton = [self btnWithImage:[UIImage easeImageNamed:@"EaseUIResource.bundle/chatBar_colorMore_photo"]
                      highlightedImage:[UIImage easeImageNamed:@"EaseUIResource.bundle/chatBar_colorMore_photoSelected"]
                                 title:@"相册"];
@@ -150,7 +151,7 @@
     [btn setImage:aImage forState:UIControlStateNormal];
     [btn setImage:aHighLightedImage forState:UIControlStateHighlighted];
     [btn setTitle:aTitle forState:UIControlStateNormal];
-    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont systemFontOfSize: 12.0];
     btn.imageEdgeInsets = UIEdgeInsetsMake(-10, 0, 20, 0);
     btn.titleEdgeInsets = UIEdgeInsetsMake(14, -60, -20, 0);
